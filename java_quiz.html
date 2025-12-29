@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Java Quiz</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Java Quiz</h1>
+
+<p>Which keyword is used to create an object in Java?</p>
+
+<input type="radio" name="q1" value="new"> new <br>
+<input type="radio" name="q1" value="create"> create <br>
+<input type="radio" name="q1" value="object"> object <br><br>
+
+<button onclick="checkJava()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+function checkJava() {
+  let ans = document.querySelector('input[name="q1"]:checked');
+  if(!ans) {
+    result.innerText = "Please select an answer";
+    return;
+  }
+  result.innerText = (ans.value === "new")
+    ? "✅ Correct!"
+    : "❌ Wrong! Correct answer is new";
+}
+</script>
+
+</body>
+</html>

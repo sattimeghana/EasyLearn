@@ -16,3 +16,32 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
+/* Full screen home page image */
+.hero {
+  height: 100vh;              /* full screen height */
+  background-image: url("../images/home_bg.jpg");
+  background-size: cover;     /* image covers full screen */
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text on image */
+.hero-content {
+  background: rgba(0, 0, 0, 0.5); /* dark transparent box */
+  padding: 30px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+

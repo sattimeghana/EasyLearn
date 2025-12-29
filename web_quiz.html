@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web Development Quiz</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Web Development Quiz</h1>
+
+<p>Which tag is used to create a hyperlink in HTML?</p>
+
+<input type="radio" name="q1" value="a"> &lt;a&gt; <br>
+<input type="radio" name="q1" value="link"> &lt;link&gt; <br>
+<input type="radio" name="q1" value="href"> &lt;href&gt; <br><br>
+
+<button onclick="checkWeb()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+function checkWeb() {
+  let ans = document.querySelector('input[name="q1"]:checked');
+  if(!ans) {
+    result.innerText = "Please select an answer";
+    return;
+  }
+  result.innerText = (ans.value === "a")
+    ? "✅ Correct!"
+    : "❌ Wrong! Correct answer is <a>";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Python Quiz</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Python Quiz</h1>
+
+<p>Which keyword is used to define a function in Python?</p>
+
+<input type="radio" name="q1" value="def"> def <br>
+<input type="radio" name="q1" value="function"> function <br>
+<input type="radio" name="q1" value="fun"> fun <br><br>
+
+<button onclick="checkPython()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+function checkPython() {
+  let ans = document.querySelector('input[name="q1"]:checked');
+  if(!ans) {
+    result.innerText = "Please select an answer";
+    return;
+  }
+  result.innerText = (ans.value === "def")
+    ? "✅ Correct!"
+    : "❌ Wrong! Correct answer is def";
+}
+</script>
+
+</body>
+</html>
